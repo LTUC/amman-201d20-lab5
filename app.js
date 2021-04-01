@@ -27,10 +27,19 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b, c = 1) {
+function multiply(a, b = 1, c = 1) {
   //eslint-disable-line
-  let multiply = a * b * c;
-  return [multiply, `The product of ${a} and ${b} is ${multiply}.`];
+  if (typeof a === 'object') {
+    let p = 1;
+    for (let i = 0; i < a.length; i++) {
+      p *= a[i];
+    }
+    return p;
+  } else {
+    let multiply = a * b * c;
+
+    return [multiply, `The product of ${a} and ${b} is ${multiply}.`];
+  }
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -140,9 +149,13 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  return [
+    multiply(dynamicArray),
+    `The numbers ${dynamicArray} have a product of ${multiply(dynamicArray)}.`,
+  ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
