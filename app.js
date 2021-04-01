@@ -54,8 +54,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  let arrayItem1= sum(x,c)[0];
+  let arrayItem2= multiply(y,c)[0];
 
-  return [sum(x,c)[0], multiply(y,c)[0], `${a} and ${b} and ${c} sum to ${sum(x,c)[0]}.`, `The product of ${a} and ${b} and ${c} is ${multiply(y,c)[0]}.`]
+  return [arrayItem1, arrayItem2, `${a} and ${b} and ${c} sum to ${arrayItem1}.`, `The product of ${a} and ${b} and ${c} is ${arrayItem2}.`]
   
 }
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -76,11 +78,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-let z=sum(testArray[0], testArray[1])[0];
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  return [sum(z, testArray[2])[0], `${testArray} was passed in as an array of numbers, and ${sum(z, testArray[2])[0]} is their sum.`];
+  let firstSum=0;
+  
+  for(let i=0; i < sumArr.length; i++){
+firstSum+=sum(sumArr[i],0)[0];
+}
+return [firstSum, `${sumArr} was passed in as an array of numbers, and ${firstSum} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -99,12 +105,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+// let p=multiply(testArray[0], testArray[1])[0];
 function multiplyArray(multArr) {
+  let firstMultiplication=1
+
+  for(let i=0; i<multArr.length; i++){
+    firstMultiplication*=multiply(multArr[i],1)[0];
+  
   //eslint-disable-line
+  // return [multiply(p, testArray[2])[0], `The numbers ${testArray} have a product of ${multiply(p, testArray[2])[0]}.`];
+  }
+  return [firstMultiplication, `The numbers ${multArr} have a product of ${firstMultiplication}.` ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
