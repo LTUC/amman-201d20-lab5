@@ -61,7 +61,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+
+let sumAndMultiplyArray = []
+
+  let aPlusB = sum(a, b)[0];
+  let lastSum = sum(aPlusB, c)[0];
+  sumAndMultiplyArray[0] = lastSum;
+
+  let aTimesB = multiply(a, b)[0];
+  let lastProduct = multiply(aTimesB, c)[0];
+  sumAndMultiplyArray[1] = lastProduct;
+
+  sumAndMultiplyArray[2] = `${a} and ${b} and ${c} sum to ${lastSum}.`
+  sumAndMultiplyArray[3] = `The product of ${a} and ${b} and ${c} is ${lastProduct}.`
+
+  return sumAndMultiplyArray;
 }
+testSumAndMultiply(4, 7, 5);
+// Here is the test for sumAndMultiply(); uncomment it to run it
+// testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
