@@ -35,6 +35,8 @@ function multiply(a, b) {
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5, 9);
+console.log(multiply(5, 6));
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -62,6 +64,8 @@ function sumAndMultiply(a, b, c) {
 
   return [sumNum, prodNum, `${a} and ${b} and ${c} sum to ${sumNum}.`, `The product of ${a} and ${b} and ${c} is ${prodNum}.`]
 }
+
+console.log(sumAndMultiply(2, 3, 4));
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4, 7, 5);
 
@@ -94,6 +98,10 @@ function sumArray(sumArr) {
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
+
+// Here is the test for sumArray(); uncomment it to run it
+
+// testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
