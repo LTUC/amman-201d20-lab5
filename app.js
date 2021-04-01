@@ -101,7 +101,25 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
+
+let returnArray = [];
+  // calculate sum of numbers in array 
+  let aPlusB = sum((sumArr[0]), (sumArr[1]));
+  aPlusB = aPlusB[0];
+  let lastSum = sum(aPlusB, sumArr[2])[0];
+  // assign sum of numbers in array to the first index of the question4 return array
+  returnArray[0] = lastSum;
+
+  // create string and assign to second index of returned array
+  returnArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${lastSum} is their sum.`
+  // return array
+   return returnArray;
 }
+  testSumArray(testArray);
+  
+// Here is the test for sumArray(); uncomment it to run it
+
+// testSumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
