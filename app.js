@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(c, d) {
   //eslint-disable-line
   let multiply = c * d;
-  console.log(multiply);
+  // console.log(multiply);
   return [multiply, `The product of ${c} and ${d} is ${multiply}.`]
 
 }
@@ -70,13 +70,13 @@ function multiply(j, i) {
 
 function sumAndMultiply(j, i, k) {
   let totalSum = sum(j, i);
-  console.log(totalSum);
+  // console.log(totalSum);
   let finalSum =sum (totalSum[0], k);
-  console.log(finalSum);
+  // console.log(finalSum);
   let product = multiply(j, i);
-  console.log(product);
+  // console.log(product);
   let finalproduct = multiply(product[0], k);
-  console.log(finalproduct);
+  // console.log(finalproduct);
   return [finalSum[0],finalproduct[0],`${j} and ${i} and ${k} sum to ${finalSum[0]}.`,`The product of ${j} and ${i} and ${k} is ${finalproduct[0]}.`];
 }
 
@@ -87,13 +87,17 @@ testSumAndMultiply(4, 7, 5);
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
-
+  Write a function called sumArray() that takes in an array of numbers as its single argument
+ and then returns an array where the first element is the sum of the numbers in the array,
+ and the second element is a string that EXACTLY follows this example and uses 
+ the values that were input into the function:
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, 
+use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished,
+ uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
 // let testArray = [2, 3, 4]; //eslint-disable-line
@@ -127,17 +131,51 @@ testSumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
-
+Write a function called multiplyArray() 
+that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers,
+ and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 "The numbers 2,3,4 have a product of 24."
-
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements.
+However, you may continue to use the + operator for string concatenation.
+Test this function by hand in the console to get it working, and when you think it is finished, 
+uncomment the call for the testMultiplyArray() 
+function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+function multiplyArray(z, x) {
   //eslint-disable-line
+
+//  function multiply(z, x) {
+//    let product = z*x;
+//    let finalproduct = product*c;
+//    let string = (`The product of ${z} and ${x} is ${finalproduct}.`);
+//   return [product, string];
+   
+//  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
