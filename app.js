@@ -29,10 +29,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+  let product=a*b;
+  return [product,`The product of ${a} and ${b} is ${product}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,10 +52,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+
+  var sumAndMultiplyArray = []
+
+  var aPlusB = sum(a, b)[0];
+  var finalSum = sum(aPlusB, c)[0];
+  sumAndMultiplyArray[0] = finalSum;
+
+  var aTimesB = multiply(a, b)[0];
+  var finalProduct = multiply(aTimesB, c)[0];
+  sumAndMultiplyArray[1] = finalProduct;
+
+  sumAndMultiplyArray[2] = `${a} and ${b} and ${c} sum to ${finalSum}.`
+  sumAndMultiplyArray[3] = `The product of ${a} and ${b} and ${c} is ${finalProduct}.`
+
+  return sumAndMultiplyArray;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -71,12 +88,26 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+
   //eslint-disable-line
+  var questionArray = [];
+  // calculate sum of numbers in array 
+  var FirstPlus = sum((sumArr[0]), (sumArr[1]));
+  FirstPlus =FirstPlus[0];
+  var FinalSum = sum(FirstPlus, sumArr[2])[0];
+  // assign sum of numbers in array to the first index of the question4 return array
+  questionArray[0] = FinalSum;
+
+  // create string and assign to second index of returned array
+  questionArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${FinalSum} is their sum.`
+  // return array
+  return questionArray;
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -93,10 +124,24 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  var questionArray = [];
+  // calculate product of first two values
+  var Firstprodect = multiply((multArr[0]), (multArr[1]));
+  Firstprodect = Firstprodect[0];
+
+  // calculate final product and assign to index 0
+  var FinalProduct = multiply(Firstprodect, multArr[2]);
+  FinalProduct = FinalProduct[0];
+  questionArray[0] = FinalProduct;
+
+  // create string and assign to index 1
+  questionArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${FinalProduct}.`
+  // return array
+  return questionArray;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
