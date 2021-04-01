@@ -85,7 +85,8 @@ function sumArray(testArray) {
   //eslint-disable-line
    let sum1=sum(testArray[0],testArray[1]);
    let sum2=sum(sum1[0],testArray[2])[0];
-  return [sum2,`2,3,4 was passed in as an array of numbers, and ${sum2} is their sum.`];
+ 
+   return [sum2,`2,3,4 was passed in as an array of numbers, and ${sum2} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
