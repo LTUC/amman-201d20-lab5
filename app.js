@@ -53,10 +53,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let s = sum(a,b)[0];
+  let sum1 = sum(s,c)[0];
+  let p = multiply(a,b)[0];
+  let product1 = multiply(p,c)[0];
   //eslint-disable-line
-  let sum = sum(a,b)+c;
-  let product = a*b*c;
-  return [sum,product,`Third element: ${a} and ${b} and ${c} sum to ${sum}.`,`Fourth element: The product of ${a} and ${b} and ${c} is ${product}.`]
+
 }
 console.log(sumAndMultiply);
 // Here is the test for sumAndMultiply(); uncomment it to run it
