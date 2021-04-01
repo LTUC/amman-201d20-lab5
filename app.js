@@ -10,9 +10,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   //eslint-disable-line
-  let sum=a+b;
-  return [sum,`The sum of ${a} and ${b} is ${sum}.`]
+  let sum = a + b;
+  return [sum, `The sum of ${a} and ${b} is ${sum}.`]
 }
+console.log();
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -29,12 +30,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
-  let multiply=a*b;
-  return [ multiply,`The product of ${a} and ${b} is ${multiply}.`] 
+  let multiply = a * b;
+  return [multiply, `The product of ${a} and ${b} is ${multiply}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,12 +51,30 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
+let d = 0
+let f = 0
+let h = 0
+let i = 0
+
 function sumAndMultiply(a, b, c) {
+
   //eslint-disable-line
+
+  d = sum(a, b);
+  f = sum(d[0], c);
+  // console.log(f[0]);
+
+  h = multiply(a, b);
+  i = multiply(h[0], c);
+  // console.log(i[0]);
+  // return [a,b,c,d,f,h,i]
+
+  return[f[0], i[0], `${a} and ${b} and ${c} sum to ${f[0]}.`, `The product of ${a} and ${b} and ${c} is ${i[0]}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
