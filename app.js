@@ -29,7 +29,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   let multi= a*b;
-  return [multi,`The product of ${a} and ${b} is ${multi}.`];
+  return [multi,`The product of ${a} and ${b} is ${multi}.`, ];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -50,11 +50,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let sumThree= sum(a, sum(b,c)[0]);
+  let multiThree=multiply(a,multiply(b,c)[0]);
+  return[sumThree[0],multiThree[0],`${a} and ${b} and ${c} sum to ${sumThree[0]}.`,`The product of ${a} and ${b} and ${c} is ${multiThree[0]}.` ];
+    
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
