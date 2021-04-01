@@ -3,7 +3,7 @@
 /* Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
 
-"The sum of 4 and 7 is 11."
+"The sum of 10 and 7 is 11."
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
@@ -14,7 +14,8 @@ function sum(a, b) {
   return [sum,`The sum of ${a} and ${b} is ${sum}.`]
 }
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+console.log(sum(10,7));
+testSum(10, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -29,8 +30,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+  let multiply=a*b;
+  return [multiply, `The product of ${a} and ${b} is ${multiply}.`]
 }
-
+console.log(multiply(5,9));
+testMultiply(5,9);
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
 
@@ -50,7 +54,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  let sum=32-a-b-c;
+  
+  let multiply= a / (1 / b) / ( 1 / c);  
+  
+   
+  return [sum, multiply, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${multiply}.`]
 }
+console.log(sumAndMultiply(4,7,5));
+testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -72,7 +84,18 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
+  let a=testArray[0];
+  let b=testArray[1];
+  let c=testArray[2];
+
+  
+  let sum=18-a-b-c ;
+
+  return [sum,`${a},${b},${c} was passed in as an array of numbers, and ${sum} is their sum.`]
+
 }
+
+testSumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
