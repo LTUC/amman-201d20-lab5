@@ -95,12 +95,24 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+   let rearray = [];
+  // calculate sum of numbers in array 
+  let ApB  = sum((sumArr[0]), (sumArr[1]));
+  ApB =ApB [0];
+  let fSum = sum(ApB, sumArr[2])[0];
+  // assign sum of numbers in array to the first index of the question4 return array
+  rearray[0] = fSum;
+
+  // create string and assign to second index of returned array
+  rearray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${fSum} is their sum.`
+  // return array
+  return rearray;
   //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
