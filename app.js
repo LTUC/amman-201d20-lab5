@@ -95,6 +95,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+ problem5
   let QReturnArray = [];
   
 
@@ -108,9 +109,11 @@ function sumArray(sumArr) {
   QReturnArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${fSum} is their sum.`
 
   return QReturnArray;
-}
 
-// Here is the test for sumArray(); uncomment it to run it
+  
+
+
+
 
 testSumArray(testArray);
 
@@ -128,7 +131,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  let qFReturnArray = [];
+  let qFReturnArrays= [];
 
   let AtB = multiply((multArr[0]), (multArr[1]));
   AtB = AtB[0];
@@ -136,12 +139,12 @@ function multiplyArray(multArr) {
 
   let fProduct = multiply(AtB, multArr[2]);
   fProduct = fProduct[0];
-  qFReturnArray[0] = fProduct;
+  qFReturnArrays[0] = fProduct;
 
 
-  qFReturnArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${fProduct}.`
+  qFReturnArrays[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${fProduct}.`
 
-  return qFReturnArray;
+  return qFReturnArrays;
 }
 
 
