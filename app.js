@@ -29,7 +29,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+
+  let multiply= a*b;
+
+  return[multiply,`The product of ${a} and ${b} is ${multiply}.`];
+
 }
+multiply(5, 9);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -121,9 +127,16 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+
+  var total = 1;
+
+  for (var i = 0; i < dynamicArray.length ; i++){
+      total = multiply(total, dynamicArray[i])[0];
+  }
+  return [total, 'The numbers ' + dynamicArray + ' have a product of ' +total + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
