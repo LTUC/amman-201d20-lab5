@@ -77,7 +77,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) {
   let summation=0
   for (let i=0; i<testArray.length;i++){
-    summation=sumArr[i]+summation;
+    summation=sum(sumArr[i],summation)[0];
   }
   return [summation, `${testArray} was passed in as an array of numbers, and ${summation} is their sum.`]
 }
@@ -102,7 +102,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) {
   let multipication=1
   for (let k=0;k<multArr.length;k++){
-    multipication=multipication*multArr[k];    
+    multipication= multiply(multipication,multArr[k])[0];    
   }
   return[multipication,'The numbers 2,3,4 have a product of 24.']
 }
@@ -134,7 +134,7 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 function multiplyAnyArray(dynamicArray) {
   let multipications=1
   for (let f=0;f<dynamicArray.length;f++){
-    multipications=multipications*dynamicArray[f];    
+    multipications= multiply(multipications,dynamicArray[f])[0];    
   }
   return[multipications,'The numbers 1,2,3,4,5 have a product of 120.'];
 }
