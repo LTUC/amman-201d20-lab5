@@ -52,8 +52,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let summ=sum(a, b)[0];
+  let summ1=sum(summ, c)[0];
+  let mul=multiply(a, b)[0];
+  let multi=multiply(mul, c)[0];
   //eslint-disable-line
+  return [
+    summ1, multi,`${a} and ${b} and ${c} sum to ${summ1}.`
+  ,`The product of ${a} and ${b} and ${c} is ${multi}.`];
 }
+testSumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
