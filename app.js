@@ -30,7 +30,18 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
   //eslint-disable-line
 }
+function multiply(a, b) { //eslint-disable-line
 
+  let multArr = [];
+  let productNumber = a * b;
+  multArr[0] = productNumber;
+  multArr[1] = `The product of ${a} and ${b} is ${productNumber}.`
+  return multArr;
+}
+
+// Here is the test for multiply(); uncomment it to run it
+// testMultiply(5,9);
+testMultiply(5, 9);
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
 
@@ -50,7 +61,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+
+let sumAndMultiplyArray = []
+
+  let aPlusB = sum(a, b)[0];
+  let lastSum = sum(aPlusB, c)[0];
+  sumAndMultiplyArray[0] = lastSum;
+
+  let aTimesB = multiply(a, b)[0];
+  let lastProduct = multiply(aTimesB, c)[0];
+  sumAndMultiplyArray[1] = lastProduct;
+
+  sumAndMultiplyArray[2] = `${a} and ${b} and ${c} sum to ${lastSum}.`
+  sumAndMultiplyArray[3] = `The product of ${a} and ${b} and ${c} is ${lastProduct}.`
+
+  return sumAndMultiplyArray;
 }
+testSumAndMultiply(4, 7, 5);
+// Here is the test for sumAndMultiply(); uncomment it to run it
+// testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -72,7 +101,25 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
+
+let returnArray = [];
+  // calculate sum of numbers in array 
+  let aPlusB = sum((sumArr[0]), (sumArr[1]));
+  aPlusB = aPlusB[0];
+  let lastSum = sum(aPlusB, sumArr[2])[0];
+  // assign sum of numbers in array to the first index of the question4 return array
+  returnArray[0] = lastSum;
+
+  // create string and assign to second index of returned array
+  returnArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${lastSum} is their sum.`
+  // return array
+   return returnArray;
 }
+  testSumArray(testArray);
+  
+// Here is the test for sumArray(); uncomment it to run it
+
+// testSumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -93,7 +140,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-}
+  
+    //eslint-disable-line
+  
+  let sumArray = [];
+    // calculate product of first two values
+    let aTimesB = multiply((multArr[0]), (multArr[1]));
+    aTimesB = aTimesB[0];
+  
+    // calculate final product and assign to index 0
+    let lastProduct = multiply(aTimesB, multArr[2]);
+    lastProduct = lastProduct[0];
+    sumArray[0] = lastProduct;
+  
+    // create string and assign to index 1
+    sumArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${24}.`
+    // return array
+    return sumArray;
+  }
+  testMultiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
