@@ -78,10 +78,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
+function sumArray(testArray) {
   //eslint-disable-line
+  
+  let sum1=sum(testArray[0],testArray[1]);
+   let sum2=sum(sum1[0],testArray[2])[0];
+ 
+   return [sum2,`2,3,4 was passed in as an array of numbers, and ${sum2} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
