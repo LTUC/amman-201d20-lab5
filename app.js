@@ -30,7 +30,18 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
   //eslint-disable-line
 }
+function multiply(a, b) { //eslint-disable-line
 
+  let multArr = [];
+  let productNumber = a * b;
+  multArr[0] = productNumber;
+  multArr[1] = `The product of ${a} and ${b} is ${productNumber}.`
+  return multArr;
+}
+
+// Here is the test for multiply(); uncomment it to run it
+// testMultiply(5,9);
+testMultiply(5, 9);
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
 
