@@ -29,10 +29,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+  let mult = a*b;
+  return [mult,`The product of ${a} and ${b} is ${mult}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,10 +52,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  let totalsum = sum((sum(a,b)[0]),c)[0];
+  let totalmult = multiply((multiply(a,b)[0]),c)[0];
+  return [totalsum, totalmult, `${a} and ${b} and ${c} sum to ${totalsum}.`, `The product of ${a} and ${b} and ${c} is ${totalmult}.`];
+
 }
+// console.log(sumAndMultiply(4, 7, 5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,13 +77,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
+function sumArray([a,b,c]) {
   //eslint-disable-line
+  
+  let first = sum(a, b)[0];
+  let seconed = sum(first, c)[0];
+  return [seconed,`${a},${b},${c} was passed in as an array of numbers, and ${seconed} is their sum.`]
 }
+// console.log(sumArray(testArray));
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,8 +103,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+function multiplyArray([a,b,c]) {
   //eslint-disable-line
+  // let first
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
