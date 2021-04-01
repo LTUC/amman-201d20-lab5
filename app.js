@@ -81,14 +81,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
+// console.log(testArray[0]);
 
 function sumArray(sumArr) {
   //eslint-disable-line
+  let num1 = testArray[0] ;
+  let num2 = testArray[1];
+  let num3 = testArray[2];
+  let sum1 = sum(num1,num2)[0];
+  let sum2 = sum(sum1,num3)[0];
+  return[sum2 , `${num1},${num2},${num3} was passed in as an array of numbers, and 9 is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
