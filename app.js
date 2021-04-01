@@ -92,7 +92,7 @@ function sumArray(sumArr) {
   // console.log(secondSum)
 
 
-  return [secondSum[0], `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${secondSum} is their sum.`]
+  return [secondSum[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${secondSum} is their sum.`]
 }
 sumArray(testArray)
 // console.log(sumArray(testArray))
@@ -118,10 +118,31 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  // function multiply(a, b) {
+  //   //eslint-disable-line
+  //   let product = a * b;
+  //   return [product, `The product of ${a} and ${b} is ${product}.`];
+  // }
+  
+  // // Here is the test for multiply(); uncomment it to run it
+  // testMultiply(5, 9);
+
+  let firstProduct = multiply(multArr[0], multArr[1]);
+  firstProduct.pop()
+  // console.log(firstProduct)
+
+  let secondProduct = multiply(firstProduct[0], multArr[2]);
+  secondProduct.pop()
+  // console.log(secondProduct)
+
+
+  return [secondProduct[0],`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${secondProduct}.`]
 }
+multiplyArray(testArray)
+// console.log(multiplyArray(testArray))
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
