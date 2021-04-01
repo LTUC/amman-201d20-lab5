@@ -124,10 +124,24 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  var questionArray = [];
+  // calculate product of first two values
+  var Firstprodect = multiply((multArr[0]), (multArr[1]));
+  Firstprodect = Firstprodect[0];
+
+  // calculate final product and assign to index 0
+  var FinalProduct = multiply(Firstprodect, multArr[2]);
+  FinalProduct = FinalProduct[0];
+  questionArray[0] = FinalProduct;
+
+  // create string and assign to index 1
+  questionArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${FinalProduct}.`
+  // return array
+  return questionArray;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
