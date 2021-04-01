@@ -144,12 +144,29 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
+
+function multiplyArray(multArr) { 
+  
+  let a;
+  let b;
+  let c;
+ 
+ for (let i=0; i<testArray.length;i++){
+   a=testArray[i++];
+   b=testArray[i++];
+   c=testArray[i++];
+ }
+ 
+ let firstPro=multiply(a,b);
+ let totPro=multiply(firstPro[0],c);
+ console.log(totPro[0]);
+ 
+ return [totPro[0],`The numbers ${a},${b},${c} have a product of ${totPro[0]}.`]
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
