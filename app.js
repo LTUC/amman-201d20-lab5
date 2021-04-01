@@ -8,7 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-/*
+
 function sum(a, b) {
   //eslint-disable-line
   let sum=a+b;
@@ -28,13 +28,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
 
-  let multipArr = [];
-  let  productAnswers = a * b;
-  multipArr[0] = productAnswers;
-  multipArr[1] = `The product of ${a} and ${b} is ${productAnswers}.`
-  return multipArr;
+function multiply(a, b) {
+  let multiArry = [];
+  let ptAnswer = a * b;
+  multiArry[0] = ptAnswer;
+  multiArry[1] = `The product of ${a} and ${b} is ${ptAnswer}.`
+  return multiArry;
   //eslint-disable-line
 }
 testMultiply(5, 9);
@@ -57,11 +57,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let sumMultiArray = []
+
+  let ApB = sum(a, b)[0];
+  let fSum = sum(ApB, c)[0];
+  sumMultiArray[0] = fSum;
+
+  let AtB = multiply(a, b)[0];
+  let fProduct = multiply(AtB, c)[0];
+  sumMultiArray[1] = fProduct;
+
+  sumMultiArray[2] = `${a} and ${b} and ${c} sum to ${fSum}.`
+  sumMultiArray[3] = `The product of ${a} and ${b} and ${c} is ${fProduct}.`
+
+  return sumMultiArray;
 }
 
+  //eslint-disable-line
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
