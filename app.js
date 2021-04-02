@@ -105,9 +105,13 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) {
   //eslint-disable-line
 
-  let arraySum = null;
+// I declared arraysum and i give it zero
+ let arraySum = null;
+ // I declared a loop for walk through the array 3 times
  for (let i = 0 ; i<3; i++){
-      arraySum =  sum(arraySum,sumArr[i])[0]
+      // here: arraysum(0)+ 2 then arraysum(2)+3 then arraysum(5) + 4 so the last value of arraySum is 9
+      arraySum =  sum(arraySum,sumArr[i])[0];
+     
  }
  return[arraySum,`${sumArr} was passed in as an array of numbers, and ${arraySum} is their sum.`]
 
@@ -139,10 +143,28 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-}
+  
 
+  //I declared a variable for i to loop 3 times 
+  let i = 0;
+
+  // Here I declared a variable and i give it a value "1"  I choose 1 because 
+  //I need to value when multiply with Index of array that not change
+  // for example if I chose 0 so all value in array will be ZERO that why we need 1 for Mutiply
+  let multiplyArray = 1;
+
+// here I declared a loop because I have an array with 3 elements so i need loop to walk three times through the array
+  while(i<3) {
+    //  multiplyArray(1) * 2 then multiplyArray(2 )*3 then multiplyArray(6) *4 // multiplyArray =24
+    multiplyArray=multiply(multiplyArray,multArr[i])[0];
+       i++;    // add 1 for i
+     }
+
+    return [multiplyArray,`The numbers ${multArr} have a product of ${multiplyArray}.`];
+
+    }
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
