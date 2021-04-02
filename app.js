@@ -54,14 +54,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  let sum=32-a-b-c;
-  
-  let multiply= a / (1 / b) / ( 1 / c);  
+  let sum1=sum(a,b)[0]
+  let sum2=sum(sum1,c)[0]
+  let multiply1=multiply(a,b)[0]
+  let multiply2=multiply(multiply1,c)[0]
   
    
-  return [sum, multiply, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${multiply}.`]
+  return [sum2, multiply2, `${a} and ${b} and ${c} sum to ${sum2}.`, `The product of ${a} and ${b} and ${c} is ${multiply2}.`]
 }
-console.log(sumAndMultiply(4,7,5));
+
 testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -88,6 +89,7 @@ function sumArray(sumArr) {
   let sum2=sum(sum1,testArray[2])[0]
 
 
+
   return [sum2,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`]
 
 }
@@ -109,12 +111,19 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+ 
+testArray= [2,3,4];
 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-}
+  let multiply1=multiply(testArray[0],testArray[1])[0]
+  let multiply2=multiply(multiply1,testArray[2])[0]
 
+  return [multiply2, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multiply2}.`]
+
+}
+testMultiplyArray(testArray);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
