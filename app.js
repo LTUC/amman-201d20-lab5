@@ -54,14 +54,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  let sum=32-a-b-c;
-  
-  let multiply= a / (1 / b) / ( 1 / c);  
+  let sum1=sum(a,b)[0]
+  let sum2=sum(sum1,c)[0]
+  let multiply1=multiply(a,b)[0]
+  let multiply2=multiply(multiply1,c)[0]
   
    
-  return [sum, multiply, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${multiply}.`]
+  return [sum2, multiply2, `${a} and ${b} and ${c} sum to ${sum2}.`, `The product of ${a} and ${b} and ${c} is ${multiply2}.`]
 }
-console.log(sumAndMultiply(4,7,5));
+
 testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
