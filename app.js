@@ -27,12 +27,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
-  //eslint-disable-line
+function multiply(a, b){let product=a*b
+return[product,`The product of ${a} and ${b} is ${product}.`]
 }
+  //eslint-disable-line
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -49,11 +50,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
-}
+  let d=sum(a,b)[0];
+  d=sum(d,c)[0];
+  let e=multiply(a,b)[0];
+  e=multiply(e,c)[0];
+  console.log(e);
+  return[d,e,`${a} and ${b} and ${c} sum to ${d}.`,`The product of ${a} and ${b} and ${c} is ${e}.`]
 
+
+ //eslint-disable-line
+
+}
+ 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,13 +80,20 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
+function sumArray(sumArr) { 
+  
+  let a=sumArr[0];
+  let b=sumArr[1];
+  let c=sumArr[2];
+  let s=sum(a,b)[0];
+  s=sum(s,c)[0];
+  return[s,`${a},${b},${c} was passed in as an array of numbers, and ${s} is their sum.`]
   //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
