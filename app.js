@@ -119,12 +119,10 @@ testArray= [2,3,4];
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-  let a=testArray[0];
-  let b=testArray[1];
-  let c=testArray[2];
+  let multiply1=multiply(testArray[0],testArray[1])[0]
+  let multiply2=multiply(multiply1,testArray[2])[0]
 
-  multiply = a/(1/b)/(1/c);
-  return [multiply, `The numbers ${a},${b},${c} have a product of ${multiply}.`]
+  return [multiply2, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multiply2}.`]
 
 }
 testMultiplyArray(testArray);
