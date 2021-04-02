@@ -109,7 +109,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-  //eslint-disable-line
+
   
   let product=1;
   for (let i = 0; i < testArray.length; i++) {
