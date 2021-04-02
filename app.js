@@ -8,10 +8,11 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+
 function sum(a, b) {
   //eslint-disable-line
-  let sum=a+b;
-  return [sum,`The sum of ${a} and ${b} is ${sum}.`]
+  let sum = a + b;
+  return [sum, `The sum of ${a} and ${b} is ${sum}.`]
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -27,9 +28,16 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(a, b) {
+  let multiArry = [];
+  let ptAnswer = a * b;
+  multiArry[0] = ptAnswer;
+  multiArry[1] = `The product of ${a} and ${b} is ${ptAnswer}.`
+  return multiArry;
   //eslint-disable-line
 }
+testMultiply(5, 9);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -49,11 +57,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let sumMultiArray = []
+
+  let ApB = sum(a, b)[0];
+  let fSum = sum(ApB, c)[0];
+  sumMultiArray[0] = fSum;
+
+  let AtB = multiply(a, b)[0];
+  let fProduct = multiply(AtB, c)[0];
+  sumMultiArray[1] = fProduct;
+
+  sumMultiArray[2] = `${a} and ${b} and ${c} sum to ${fSum}.`
+  sumMultiArray[3] = `The product of ${a} and ${b} and ${c} is ${fProduct}.`
+
+  return sumMultiArray;
 }
 
+//eslint-disable-line
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -71,12 +95,27 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
-}
+ problem5
+  let QReturnArray = [];
+  
 
-// Here is the test for sumArray(); uncomment it to run it
+  let ApB = sum((sumArr[0]), (sumArr[1]));
+  ApB = ApB[0];
+  let fSum = sum(ApB, sumArr[2])[0];
 
-// testSumArray(testArray);
+  QReturnArray[0] = fSum;
+
+
+  QReturnArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${fSum} is their sum.`
+
+  return QReturnArray;
+
+  
+
+
+
+
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -92,11 +131,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+  let qFReturnArrays= [];
+
+  let AtB = multiply((multArr[0]), (multArr[1]));
+  AtB = AtB[0];
+
+
+  let fProduct = multiply(AtB, multArr[2]);
+  fProduct = fProduct[0];
+  qFReturnArrays[0] = fProduct;
+
+
+  qFReturnArrays[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${fProduct}.`
+
+  return qFReturnArrays;
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+
+
+
+
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
