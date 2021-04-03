@@ -118,6 +118,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  let result = 0;
+  let sumRes = 0;
+  for (let index = 0; index < sumArr.length; index++) {
+    result = sum(sumArr[index], 0);
+    result = parseInt(result[0]);
+    sumRes += result;
+  }
+  return [sumRes, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumRes} is their sum.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
