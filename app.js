@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
   //eslint-disable-line
   let multiply=a*b;
-  return[multiply,`The product of ${5} and ${9} is ${45}.`]
+  return[multiply,`The product of ${a} and ${b} is ${multiply}.`]
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -52,10 +52,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-}
+ let sumResult=sum(a,b); //collection a and b and string
+ let resultOne=sum(sumResult[0],c);  // collection sumResult[0] and c and string
+ let multiplyResult=multiply(a,b);
+  let resultTwo=multiply(multiplyResult[0],c);
+return[resultOne[0],resultTwo[0],`${a} and ${b} and ${c} sum to ${resultOne[0]}.` , `The product of ${a} and ${b} and ${c} is ${resultTwo[0]}.`]
 
-// Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+
+}
+// // Here is the test for sumAndMultiply(); uncomment it to run it
+testSumAndMultiply(4,7,5);
+console.log(sumAndMultiply(4,7,5));
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -74,12 +82,18 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
+  // let array1=[0];
+  // let array2=[1];
+  // let array3=[2];
+  // let array=sum(array1,array2,array3);
+  // return[sumArray,`${array1},${array2},${array3} was passed in as an array of numbers, and ${array} is their sum.`]
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
-
+// console.log(sumArray);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
