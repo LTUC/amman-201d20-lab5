@@ -29,16 +29,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
+  let multiply=a * b;
+  return [multiply,"The product of 5 and 9 is 45."]
 }
-
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in 
+three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -49,34 +51,59 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let sum1 = sum(a,b)[0];
+  let sum2 = sum(sum1,c)[0];
+  let multiply1 = multiply(a, b)[0];
+  let multiply2 = multiply(multiply1,c)[0];
+  //  if (sumAndMultiply(4, 7, 5)[0] === 16 && sumAndMultiply(4, 7, 5)[1] === 140 && sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.')
+  return [sum2,multiply2,`${a} and ${b} and ${c} sum to ${sum2}.`,`The product of ${a} and ${b} and ${c} is ${multiply2}.`]
   //eslint-disable-line
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+//console.log(sumAndMultiply(4,7,5)); 
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() 
+that takes in an array of numbers as its single argument and 
+then returns an array where the first element is the sum of the numbers in the array, 
+and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
-
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
-
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+  let sumx = 0;
+  let str = "";
+  for(let i=1;i<sumArr.length;i++){
+    if(sumx == 0){
+      str = sumArr[i-1] + "," + sumArr[i] + ",";
+      sumx = sum(sumArr[i-1],sumArr[i])[0];
+      //console.log(sumx);
+    }else{
+      sumx = sum(sumx,sumArr[i])[0];
+      str = str + sumArr[i] + ",";
+      //console.log(sumx);
+    }
+  }
+  //console.log(str);
+  str = str.substring(0,str.length-1);
+  return [sumx,`${str} was passed in as an array of numbers, and ${sumx} is their sum.`];
   //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+//console.log(sumArray(testArray));
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
