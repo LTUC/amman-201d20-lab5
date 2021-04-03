@@ -108,6 +108,21 @@ Test this function by hand in the console to get it working, and when you think 
 
   let testArray = [2, 3, 4]; //eslint-disable-line
 
+// <<<<<<< problem5
+//   function sumArray(sumArr) {
+//     //eslint-disable-line
+//   let a = testArray[0];
+//   let b = testArray[1];
+//   let c = testArray[2];
+  
+//   let firstSum=sum(a, b);
+//   console.log(firstSum);
+//   let secondSum=sum(firstSum[0], c);
+//    console.log(secondSum);
+//   return [secondSum[0],`${a},${b},${c} was passed in as an array of numbers, and ${secondSum[0]} is their sum.`]
+  
+//   }
+
 function sumArray(sumArr) {
   //eslint-disable-line
 let a = testArray[0];
@@ -130,56 +145,57 @@ testSumArray(testArray);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
-/* Problem 5
-Write a function called multiplyArray() 
-that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers,
- and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
-"The numbers 2,3,4 have a product of 24."
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements.
-However, you may continue to use the + operator for string concatenation.
-Test this function by hand in the console to get it working, and when you think it is finished, 
-uncomment the call for the testMultiplyArray() 
-function and see if the test passes.*/
+
+// Write a function called multiplyArray()that takes an array of numbers as its argument and returns an arraywhose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function
+// Write a function called multiplyArray() 
+// that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers,
+//  and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+// 
+// "The numbers 2,3,4 have a product of 24."
+// IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements.
+// However, you may continue to use the + operator for string concatenation.
+// Test this function by hand in the console to get it working, and when you think it is finished, 
+// uncomment the call for the testMultiplyArray() 
+// function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(z, x) {
-  //eslint-disable-line
 
-//  function multiply(z, x) {
-//    let product = z*x;
-//    let finalproduct = product*c;
-//    let string = (`The product of ${z} and ${x} is ${finalproduct}.`);
-//   return [product, string];
+// // =======
+// // function multiplyArray(z, x) {
+//   //eslint-disable-line
+
+// //  function multiply(z, x) {
+// //    let product = z*x;
+// //    let finalproduct = product*c;
+// //    let string = (`The product of ${z} and ${x} is ${finalproduct}.`);
+// //   return [product, string];
    
-//  }
+// //  }
 
+// }
+//
 
+  // testmultiplyArray(testArray);
+  function multiplyArray(multArr) { 
+    let a = testArray[0];
+  let b = testArray[1];
+  let c = testArray[2];
+  
+  let firstMul=multiply(a, b);
+  // console.log(firstMul);
+  let secondMul=multiply(firstMul[0], c);
+   console.log(secondMul[0]);
 
+  return [secondMul[0],`The numbers ${a},${b},${c} have a product of ${secondMul[0]}.`]
+ 
+  }
+  // Here is the test for multiplyArray(); uncomment it to run it
+  testMultiplyArray(testArray);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-// Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
+// Here is the test for multiplyArray(); uncomment it to run it
+
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -200,11 +216,11 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+// let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
-}
+// function multiplyAnyArray(dynamicArray) {
+//   //eslint-disable-line
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
