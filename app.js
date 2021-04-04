@@ -128,10 +128,6 @@ function multiplyArray(multArr) {
     
   }  
   return [finalmulti,'The numbers 2,3,4 have a product of 24.'];
-
-
-  //let testArray=[(2*3*4),"The numbers 2,3,4 have a product of 24."]
-  //return testArray;
   
   //eslint-disable-line
 }
