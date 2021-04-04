@@ -28,8 +28,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+  let multiply=a*b;
+return[multiply,`The product of ${a} and ${b} is ${multiply}.`]
+ 
   //eslint-disable-line
 }
+testMultiply(5,9);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -49,8 +53,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  let output=sum(a,b)[0]; 
+  let noor=sum(output,c)[0];
+  let output2=multiply(a,b)[0];
+  let noor2=multiply (output2,c)[0];
+  console.log(output);
+  return [noor,noor2,`${a} and ${b} and ${c} sum to ${noor}.`, `The product of ${a} and ${b} and ${c} is ${noor2}.`]
+  
   //eslint-disable-line
 }
+testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -71,9 +83,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+  let sumarray1=sum(sumArr[0],sumArr[1])[0];
+  let sumarray2=sum(sumarray1,sumArr[2])[0];
+  return[sumarray2,`${sumArr[0]},${sumArr[1]},${sumArr[2]} passed in as an array of numbers, and ${sumarray2} is their sum.`]
+
   //eslint-disable-line
 }
 
+testSumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
@@ -91,10 +108,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) {
-  //eslint-disable-line
+function multiplyArray(multArr){
+let multiply1=multiply(multArr[0],multArr[1])[0];
+let multiply2=multiply(multiply1,multArr[2])[0];
+
+  return [multiply2,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiply2}.`];
 }
 
+  //eslint-disable-line
+  testMultiplyArray(testArray)
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
