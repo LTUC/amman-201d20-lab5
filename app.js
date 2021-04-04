@@ -55,8 +55,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
 
-var d = a + b + c;
-var e = a*b*c;
+let d = a + b + c;
+let e = a*b*c;
 
     return [ d , e , a + ' and ' + b + ' and ' + c + ' sum to ' + d + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + e + '.'];
 }
