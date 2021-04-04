@@ -130,6 +130,7 @@ function multiplyArray(multArr) {
   return [finalmulti,'The numbers 2,3,4 have a product of 24.'];
   
   //eslint-disable-line
+  //just finish every thing hisham said 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
