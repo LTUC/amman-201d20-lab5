@@ -70,7 +70,7 @@ function sumAndMultiply(a, b, c) {
   // console.log(i[0]);
   // return [a,b,c,d,f,h,i]
 
-  return[f[0], i[0], `${a} and ${b} and ${c} sum to ${f[0]}.`, `The product of ${a} and ${b} and ${c} is ${i[0]}.`]
+  return [f[0], i[0], `${a} and ${b} and ${c} sum to ${f[0]}.`, `The product of ${a} and ${b} and ${c} is ${i[0]}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -90,9 +90,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4];
- //eslint-disable-line
-let q=0
-let w=0
+//eslint-disable-line
+let q = 0
+let w = 0
 
 function sumArray(sumArr) {
   //eslint-disable-line
@@ -100,7 +100,7 @@ function sumArray(sumArr) {
   q = sum(testArray[0], testArray[1]);
   w = sum(q[0], testArray[2]);
 
-  return[w[0], `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${w[0]} is their sum.`]
+  return [w[0], `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${w[0]} is their sum.`]
 }
 
 
@@ -121,14 +121,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-let r =0
-let t =0
+let r = 0
+let t = 0
 function multiplyArray(multArr) {
   //eslint-disable-line
   r = multiply(testArray[0], testArray[1]);
   t = multiply(r[0], testArray[2]);
 
-  return[t[0], `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${t[0]}.`]
+  return [t[0], `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${t[0]}.`]
 
 }
 
@@ -143,6 +143,7 @@ testMultiplyArray(testArray);
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
+
 Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
@@ -154,13 +155,29 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
+let testDynamicArray = [1, 2, 3, 4, 5];
+//eslint-disable-line
+let x = 1
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  for (i = 0; i < dynamicArray.length; i++) {
+    x = multiply(x, dynamicArray[i])[0];
+    return [x, `The numbers ${dynamicArray} have a product of ${x}.`];
+  }
+
+ // console.log(x);
+ // console.log(`The numbers ${dynamicArray} have a product of ${x}.`);
+ // if (`The numbers ${dynamicArray} have a product of ${x}.`==='The numbers 1,2,3,4,5 have a product of 120.'){
+ // console.log("yes");
+ // }
+ 
+  //return [x, "The numbers 1,2,3,4,5 have a product of 120."]
 }
+//multiplyAnyArray(testDynamicArray);
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
