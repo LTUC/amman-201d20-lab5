@@ -54,8 +54,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let add1 = sum(a, b)[0];
-  let add2 = sum(add1, c)[0];
+  let add1=sum(a, b)[0];
+  let add2=sum(add1, c)[0];
   let multi = multiply(a, b)[0];
   let mult2 = multiply(multi, c)[0];
   return [add2, mult2, `${a} and ${b} and ${c} sum to ${add2}.`, `The product of ${a} and ${b} and ${c} is ${mult2}.`]
@@ -82,11 +82,11 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  let sum=0;
-  for(let i=0;i<testArray.length;i++)
-     sum+=testArray[i]
-
-  return [sum,`2,3,4 was passed in as an array of numbers, and 9 is their sum.`]
+  
+  let add1=sum(sumArr[0],sumArr[1])[0];
+   let add2=sum(add1,sumArr[2])[0];
+    
+  return [add2, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${add2} is their sum.`]
   //eslint-disable-line
 }
 
