@@ -73,7 +73,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  var total = 0;
+  let total = 0;
   total = sum(sumArr[0], sumArr[1])[0];
   total = sum(total, sumArr[2])[0];
    
